@@ -1,0 +1,27 @@
+﻿@model List<Estate>
+<!Doctype html>
+<html>
+<head>
+    <link href="~/css/StyleSheetIndex.css" />
+</head>
+<body>
+    <div class="text-center bg-secondary">
+        <h1 class="display-4">Best Home For You</h1>
+    </div>
+    @foreach (Estate estate in @Model)
+    {
+
+        <img src="@estate.Image" height="150" width="150"/>
+        <form class="formIndex" style="padding-block-end: 50px" method="post" asp-route-id="@estate.EstateId" asp-action="CurrentEstate">
+           
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="CompanyDetail" asp-route-id="@estate.EstateId"><b>@estate.Company.CompanyName</b></a><br>
+                <b>Street: @estate.Street<br></b>
+                <b>Price: @estate.Price AMD<br></b>
+                <button class="btn btn-primary center-block"  type="submit">Detail</button>
+           
+        </form>
+        
+    }
+</body>
+</html>
+
