@@ -2,26 +2,25 @@
 <!Doctype html>
 <html>
 <head>
-    <link href="~/css/StyleSheetIndex.css" />
+    <link rel="stylesheet" href="~/css/StyleSheetForIndex.css" />
 </head>
 <body>
     <div class="text-center bg-secondary">
-        <h1 class="display-4">Best Home For You</h1>
+        <h1 class="intro_title display-4">Best Home For You</h1>
     </div>
-    @foreach (Estate estate in @Model)
-    {
-
-        <img src="@estate.Image" height="150" width="150"/>
-        <form class="formIndex" style="padding-block-end: 50px" method="post" asp-route-id="@estate.EstateId" asp-action="CurrentEstate">
-           
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="CompanyDetail" asp-route-id="@estate.EstateId"><b>@estate.Company.CompanyName</b></a><br>
+    <div class="tabSlider">
+        @foreach (Estate estate in @Model)
+        {
+            <img src="@estate.Image" height="150" width="100" />
+            <form class="formIndex" style="padding-block-end: 10px" method="post" asp-route-id="@estate.EstateId" asp-action="CurrentEstate">
+                <a class="navbar-brand nav-linkIndex" asp-area="" asp-controller="Home" asp-action="CompanyDetail" asp-route-id="@estate.EstateId"><b>@estate.Company.CompanyName</b></a><br>
                 <b>Street: @estate.Street<br></b>
-                <b>Price: @estate.Price AMD<br></b>
-                <button class="btn btn-primary center-block"  type="submit">Detail</button>
-           
-        </form>
-        
-    }
+                <b>Price: @estate.Price AMD</b><br>
+                <button class="btnIndex btn btn-secondary center-block" type="submit">Learn More</button>
+            </form>
+        }
+    </div>
+   
 </body>
 </html>
 
