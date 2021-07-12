@@ -1,7 +1,11 @@
-﻿
-@model Estate
-<div>
-    <h1> @Model.Company.CompanyName<br></h1>
-    <h6>@Model.Company.Description</h6><br/><br>
+﻿@model Estate
+<head>
+    <link rel="stylesheet" href="~/css/StyleSheetForIndex.css" />
+</head>
+<div class="tabSlider">
     <img src="@Model.Image" height="150" width="150" />
+    <h1> @Model.Company.Name<br></h1>
+    <h3>@Model.Company.Description</h3><br/><br>
+</div>
+<div>
 </div>

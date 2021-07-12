@@ -19,6 +19,14 @@ namespace RealEstate.Controllers
 
         public IActionResult Index() => View(estateRepository.Estates);
         public IActionResult About() => View();
+        public IActionResult Contact() => View();
+        public IActionResult SignIn() => View();
+        public IActionResult LogIn(string login, string passw)
+        {
+
+            return RedirectToAction("Index");
+        }
+
 
         public IActionResult CurrentEstate(int id) => View("EstateDescription", estateRepository.GetEstateById(id));
 

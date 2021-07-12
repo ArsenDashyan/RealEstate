@@ -1,0 +1,25 @@
+﻿@{ Layout = null;}
+<!Doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/css/SignInStyle.css" />
+</head>
+<body>
+    <div class="intro header">
+        <form method="post" asp-action="LogIn">
+            <div class="form-group">
+                <label for="Login">Login</label>
+                <input class="inputStyle form-control" name="Login" />
+            </div>
+            <div class="form-group">
+                <label for="Password">Passw</label>
+                <input class="inputStyle form-control" name="Passw" />
+            </div>
+
+            <button type="submit" class="btnIndex btn btn-primary center-block">Sign In</button>
+            <a class="nav-link btn btn-default" asp-action="Index">Cancel</a>
+        </form>
+    </div>
+</body>
+</html>

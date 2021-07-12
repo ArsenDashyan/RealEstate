@@ -13,7 +13,7 @@
         {
             <img src="@estate.Image" height="150" width="100" />
             <form class="formIndex" style="padding-block-end: 10px" method="post" asp-route-id="@estate.EstateId" asp-action="CurrentEstate">
-                <a class="navbar-brand nav-linkIndex" asp-area="" asp-controller="Home" asp-action="CompanyDetail" asp-route-id="@estate.EstateId"><b>@estate.Company.CompanyName</b></a><br>
+                <a class="navbar-brand nav-linkIndex" asp-area="" asp-controller="Home" asp-action="CompanyDetail" asp-route-id="@estate.EstateId"><b>@estate.Company.Name</b></a><br>
                 <b>Street: @estate.Street<br></b>
                 <b>Price: @estate.Price AMD</b><br>
                 <button class="btnIndex btn btn-secondary center-block" type="submit">Learn More</button>

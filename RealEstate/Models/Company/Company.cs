@@ -1,14 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace RealEstate.Models
+#nullable disable
+
+namespace RealEstate.Models.Estate
 {
-    public class Company
+    public partial class Company
     {
-        public string CompanyName { get; set; }
+        public Company()
+        {
+            Estates = new HashSet<Estate>();
+        }
+
         public int CompanyId { get; set; }
+        public string Name { get; set; }
+        public string Street { get; set; }
+        public int Tel { get; set; }
+        public string Email { get; set; }
+        public string Image { get; set; }
         public string Description { get; set; }
+        public string WebAdress { get; set; }
+
+        public virtual ICollection<Estate> Estates { get; set; }
     }
 }
